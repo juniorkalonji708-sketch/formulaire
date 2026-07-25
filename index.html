@@ -16,41 +16,42 @@
 
 <p>Rejoignez notre structure des acteurs de cinéma en remplissant ce formulaire.</p>
 
-<form action="#" method="post">
+<form action="https://formspree.io/f/xykrbzqd" method="POST" enctype="multipart/form-data">
 
 <label>Nom complet</label>
-<input type="text" placeholder="Votre nom complet" required>
+<input type="text" name="nom_complet" placeholder="Votre nom complet" required>
 
 <label>Date de naissance</label>
-<input type="date" required>
+<input type="date" name="date_naissance" required>
 
 <label>Sexe</label>
-<select required>
+<select name="sexe" required>
 <option value="">Choisir</option>
 <option>Homme</option>
 <option>Femme</option>
 </select>
 
 <label>Téléphone</label>
-<input type="tel" placeholder="+243..." required>
+<input type="tel" name="telephone" placeholder="+243..." required>
 
 <label>Email</label>
-<input type="email" placeholder="Votre adresse e-mail">
+<input type="email" name="email" placeholder="Votre adresse e-mail">
 
 <label>Ville</label>
-<input type="text" placeholder="Votre ville">
+<input type="text" name="ville" placeholder="Votre ville">
 
 <label>Profession</label>
-<input type="text" placeholder="Ex : Acteur, Réalisateur, Figurant">
+<input type="text" name="profession" placeholder="Ex : Acteur, Réalisateur, Figurant">
 
 <label>Expérience dans le cinéma</label>
-<textarea rows="4" placeholder="Décrivez votre expérience"></textarea>
+<textarea name="experience" rows="4" placeholder="Décrivez votre expérience"></textarea>
 
 <label>Photo</label>
-<input type="file" accept="image/*">
+<input type="file" name="photo" accept="image/*">
 
 <label>Pourquoi souhaitez-vous adhérer ?</label>
-<textarea rows="5"></textarea>
+<textarea name="motivation" rows="5"></textarea>
+
 <label for="source">Comment avez-vous été informé(e) de cette annonce ?</label>
 
 <select id="source" name="source" required>
@@ -66,13 +67,16 @@
     <option value="affiche">Affiche ou banderole</option>
     <option value="site">Site web</option>
     <option value="autre">Autre</option>
-</select><label for="autreSource">Si autre, veuillez préciser :</label>
+</select>
+
+<label for="autreSource">Si autre, veuillez préciser :</label>
 
 <input
     type="text"
     id="autreSource"
     name="autreSource"
     placeholder="Précisez ici...">
+
 <button type="submit">Envoyer ma demande</button>
 
 </form>
